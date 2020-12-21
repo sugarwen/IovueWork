@@ -30,6 +30,7 @@ class MainActivity : BaseActivity() {
                     "\n\n1.新的升级任务发布后，车辆将自动在后台完成软件下载。" +
                     "\n\n2.下载完成后会在夜间自动安装软件更新，安装完成后将通知您。"
 
+
             UpdateOTAActivity.start(this, content, "")
         })
 
