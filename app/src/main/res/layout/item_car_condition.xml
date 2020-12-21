@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_condition_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_dark"
+                android:gravity="center_vertical"
+                android:minHeight="45dp"
+                android:paddingLeft="20dp"
+                android:textColor="@android:color/white"
+                tools:text="车辆动力状态为 ON" />
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_condition_fail" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_condition_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            tools:text="请调整车辆动力状态为 ON" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

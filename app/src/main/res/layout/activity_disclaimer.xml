@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="软件更新" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="免责声明" />
+
+            <TextView
+                android:id="@+id/tv_disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="“软件在线升级”（以下简称OTA）系统可以对车辆内部软件进行升级，从而使车内软件系统保持最新的或者合适的版本，提升车辆性能或者引入新的功能。
+
+使用OTA系统升级，请您务必仔细阅读并透彻理解协议内容。您可以选择不使用OTA系统对车辆内部软件进行升级，如果您使用此系统将被认为是对本协议全部内容的认可。
+
+网络相关：
+
+1. OTA系统依赖网络进行数据传输、升级包下载、结果上报等动作，请您确保良好的网络连接。
+
+2. 升级过程会使用车联网控制系统（T-BOX）下载会从而消耗您车联网套餐流量
+
+3. OTA系统更新涉及网络通讯服务提供商、OTA系统服务提供商、第三方APP提供商、产品提供商等多方介入，可能存在因网络不稳定、恶意攻击等原因导致服务中断或不能满足客户需求的情况，用户使用OTA系统进行软件升级时必须承担以上风险。
+
+隐私相关：
+
+1. xx公司尊重并重视用户的数据隐私，OTA系统不会收集非OTA相关的用户数据。
+
+2. 对于OTA相关的数据，xx公司会妥善保存，并在法律规定的范围进行使用。
+
+用户数据：
+
+1. OTA系统本身不会主动对用户数据进行操作，但是出于对用户数据的尊重和保护，xx公司建议用户在进行升级前，对数据进行备份。
+
+2. xx公司不会对由于OTA相关操作导致的用户数据丢失或者损坏情况负责。
+
+" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

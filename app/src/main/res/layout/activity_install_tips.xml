@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="软件更新" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_releaseNote_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="更新提示" />
+
+            <TextView
+                android:id="@+id/tv_releaseNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                tools:text="1. 为保证升级结果的可靠性，请您根据提示信息操作车辆满足所需的条件。
+
+
+
+\n2. 升级过程中需要车辆处于静止状态并停在空气流通良好的地方，期间请勿驾驶车辆，以免危害您的人身和财产安全。
+
+
+
+\n3. 在使用OTA升级过程中，请您尽可能保证车辆的网络连接正常，以免由于网络状态不稳定导致升级失败或数据丢失。
+
+
+
+\n4. 在OTA升级过程中，如果遇到任何问题，您可以联系xx公司售后服务热线（XX：400XXXXX）或前往附近的4S店进行维修。" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_disclaimer_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_choose"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:checked="false"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_disclaimer_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="我已详细阅读上述信息，并同意升级服务条款" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_handle_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_install_sure"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="确定" />
+
+
+        <Button
+            android:id="@+id/btn_install_cancel"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:text="取消" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_handle_btn"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            tools:text="200M" />
+
+        <TextView
+            android:id="@+id/tv_new_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            tools:text="v1.0.5" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_size"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:max="100"
+            tools:progress="20" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_marginLeft="20dp"
+            tools:text="软件已下载完成，预计更新耗时 45 分钟..." />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

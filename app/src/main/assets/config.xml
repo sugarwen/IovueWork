@@ -1,0 +1,16 @@
+<info>
+    <projectName name="test"/>
+
+    <sysiPackageName name="com.iovuework"/>
+
+    <up>
+        <ip name="115.159.54.245"/>
+        <port name="1883"/>
+    </up>
+
+    <ecu>
+        <ecuType name="hu"/>
+        <ecuDid name="test1"/>
+        <ecuSwid name="test1" />
+    </ecu>
+</info>
